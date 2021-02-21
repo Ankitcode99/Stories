@@ -1,0 +1,39 @@
+.login-container {
+    width:400px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.loginCard{
+    border-radius: 30px;
+}
+
+.darken-1{
+    border-radius: 10px;
+}
+
+.btn{
+    border-radius: 10px;
+}
+
+p {
+    margin: 10px 0 !important;
+}
+
+.fa-small{
+    font-size: 16px !important;
+}
+
+.btn-float{
+    float:left;
+    margin-right: 10px;
+    border-radius: 8px;
+}
+
+.deleteBtn{
+    border-radius: 8px;
+}
+
+.img-small{
+    width:180px;
+}
