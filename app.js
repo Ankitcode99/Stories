@@ -27,8 +27,8 @@ app.use(methodOverride(function(req,res){
 }))
 
 setInterval(async ()=>{
-    const resp = await fetch('https://project-stories.onrender.com/keep-alive', {method:'GET'});
-    console.log(`Got keep-alive! - `,(await resp.text()))
+    const resp = await axios.get('https://project-stories.onrender.com/keep-alive');
+    console.log(`Got keep-alive! - `,(resp.data))
 }, 1000*3)
 
 // Connecting to MongoDB
@@ -36,6 +36,7 @@ connectDB()
 
 //Helpers
 const {formatDate,stripTags,truncate,editIcon,select} = require('./helpers/hbs')
+const { default: axios } = require('axios')
 
 // View Engine
 app.engine('.hbs',exphbs({helpers:{
