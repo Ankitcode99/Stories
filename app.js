@@ -26,10 +26,10 @@ app.use(methodOverride(function(req,res){
     }
 }))
 
-setInterval(()=>{
+setInterval(async ()=>{
     const resp = await fetch('https://project-stories.onrender.com/keep-alive', {method:'GET'});
-    console.log(`Got keep-alive! - `, resp)
-}, 1000*60*14)
+    console.log(`Got keep-alive! - `,(await resp.text()))
+}, 1000*3)
 
 // Connecting to MongoDB
 connectDB()
