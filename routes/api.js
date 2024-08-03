@@ -9,6 +9,10 @@ router.get('/',ensureGuest,(req,res)=>{
     })
 })
 
+router.get('/keep-alive',(req,res)=>{
+    res.json({msg:'App is alive!'})
+})
+
 router.get('/dashboard',ensureAuth, async(req,res)=>{
     try{
         const stories = await Story.find({user:req.user.id}).lean()
