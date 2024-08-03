@@ -29,7 +29,7 @@ app.use(methodOverride(function(req,res){
 setInterval(async ()=>{
     const resp = await axios.get('https://project-stories.onrender.com/keep-alive');
     console.log(`Got keep-alive! - `,(resp.data))
-}, 1000*3)
+}, 1000*60*14)
 
 // Connecting to MongoDB
 connectDB()
