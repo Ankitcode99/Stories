@@ -27,11 +27,8 @@ app.use(methodOverride(function(req,res){
 }))
 
 setInterval(()=>{
-    fetch('https://project-stories.onrender.com/keep-alive').then((response)=>{
-        console.log(`Checked alive status at ${new Date()}`)
-    }).catch(err=>{
-        console.error(`Error while keeping alive.`)
-    })
+    const resp = await fetch('https://project-stories.onrender.com/keep-alive', {method:'GET'});
+    console.log(`Got keep-alive! - `, resp)
 }, 1000*60*14)
 
 // Connecting to MongoDB
