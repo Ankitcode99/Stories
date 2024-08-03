@@ -10,7 +10,7 @@ router.get('/',ensureGuest,(req,res)=>{
 })
 
 router.get('/keep-alive',(req,res)=>{
-    res.json({msg:'App is alive!'})
+    res.json({msg:'App is alive! '+(new Date())})
 })
 
 router.get('/dashboard',ensureAuth, async(req,res)=>{
