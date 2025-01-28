@@ -29,8 +29,8 @@ app.use(methodOverride(function(req,res){
 setInterval(async ()=>{
     const resp = await axios.get('https://project-stories.onrender.com/keep-alive');
     console.log(`Got keep-alive for stories! - `,(resp.data))
-    const resp2 = await axios.get('https://scrapy-8vfs.onrender.com/health-check')
-    console.log(`Got keep-alive for Scrapy! - `,(resp2.data))
+    const resp2 = await axios.get('https://vanaj-backend-dev.onrender.com/');
+    console.log(`Got keep-alive for vanaj! - `,(resp2.data))
 }, 1000*60*14)
 
 // Connecting to MongoDB
