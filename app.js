@@ -31,6 +31,8 @@ setInterval(async ()=>{
     console.log(`Got keep-alive for stories! - `,(resp.data))
     const resp2 = await axios.get('https://vanaj-backend-dev.onrender.com/');
     console.log(`Got keep-alive for vanaj! - `,(resp2.data))
+    const resp3 = await axios.get('https://go-task-management.onrender.com/health-check');
+    console.log('Got keep-allive for gtm - ', resp3.data)
 }, 1000*60*14)
 
 // Connecting to MongoDB
